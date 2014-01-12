@@ -1,37 +1,26 @@
 /*
- *          File: main.cpp
- * Last Modified: February 19, 2000
- *         Topic: Writing Make Files
- * ----------------------------------------------------------------
+ * main.cpp
+ * 
+ * Copyright 2014 Petri J. Vaisanen <petri.j.vaisanen@gmail.com>
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ * 
+ * 
  */
 
-#include <iostream>
-#include "Point.h"
-#include "Rectangle.h"
+#include "myapp.h"
 
-using namespace std;
-
-int main()
-{
-
-  Point p1(1, 1);
-  cout 
-	<< "Point p1 at: " 
-	<< p1.get_x() << ", " 
-	<< p1.get_y() << endl;
-
-  p1.move(3, 5);
-  cout 
-	<< "Moved p1 now at: "
-    << p1.get_x() << ", " 
-    << p1.get_y() << endl;
-
-  Point p2(9,8);
-  Rectangle r1(p1, p2);
-
-  cout 
-	<< "Rectangle r1 area is: " 
-	<< r1.area() << endl;
-
-  return 0;
-}
+POCO_APP_MAIN(MyApp)

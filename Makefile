@@ -1,5 +1,9 @@
 ## ###############################################################
 # Project specific part
+#
+# A recursively expanded variable: ‘=’
+# Simply expanded variables are defined by lines using ‘:=’ or ‘::=’
+#
 #  ###############################################################
 
 # target name
@@ -15,11 +19,16 @@ BUILD_DIR := ./build
 INC_DIRS = \
 	-Iinc
 
+# ld
+LFLAGS = \
+	-lPocoFoundation \
+	-lPocoUtil \
+	-L /usr/local/lib/
+
 # sources
 SRCS := \
 	./src/main.cpp \
-	./src/point/Point.cpp \
-	./src/retangle/Rectangle.cpp
+	./src/myapp.cpp
 
 ## ###############################################################
 
@@ -57,8 +66,5 @@ $(BUILD_DIR)/$(TARGET): $(OBJS)
 clean:
 	rm --force $(OBJ_DIR)/*.o
 	rm --force $(BUILD_DIR)/$(TARGET)
-
-# A recursively expanded variable: ‘=’
-# Simply expanded variables are defined by lines using ‘:=’ or ‘::=’
 
 ## ###############################################################
